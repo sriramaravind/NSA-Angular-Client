@@ -1,0 +1,31 @@
+<div class="list row">
+
+  <div class="col-md-6">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let freeze of freezes; let i = index" [class.active]="i == currentIndex"
+        (click)="setActiveFreeze(freeze, i)">
+        Click to edit Freeze date
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-6">
+    <div *ngIf="currentFreeze">
+      <div>
+        <label><strong>Day:</strong></label> {{ currentFreeze.fday }}
+      </div>
+      <div>
+        <label><strong>Month:</strong></label> {{ currentFreeze.fmonth }}
+      </div>
+      <div>
+        <label><strong>Year:</strong></label> {{ currentFreeze.fyear }}
+      </div>
+      <a class="badge badge-warning" routerLink="/freezes/{{ currentFreeze.id }}">
+        Edit
+      </a>
+    </div>
+    
+    <div *ngIf="!currentFreeze">
+    </div>
+  </div>
+</div>

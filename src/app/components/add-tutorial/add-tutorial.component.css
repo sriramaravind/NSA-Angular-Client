@@ -1,0 +1,12 @@
+.submit-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+.is-grouped {   
+  display: inline-block;
+}
+
+.is-grouped > .button:not(:last-child) {
+  margin-right: 10px;
+}

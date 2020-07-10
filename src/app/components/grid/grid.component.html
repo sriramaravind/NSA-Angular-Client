@@ -1,0 +1,15 @@
+<div class="control-section">
+  <div>
+    <input type="button" id="btn" (click)="click()" value="Refresh DB" />
+    <ejs-grid #grid [dataSource]='gridData' [toolbar]='toolbar' (toolbarClick)='toolbarClick($event)'
+      [allowExcelExport]='true' [pageSettings]='pageSettings' [allowPaging]='true' [allowFiltering]='true'
+      [filterSettings]='filterOptions' height='650px'>
+
+      <e-columns>
+        <e-column field='name' headerText='Name' width='150' textAlign='left'></e-column>
+        <e-column field='date' headerText=' Date' width='150' textAlign='center'></e-column>
+        <e-column field='time' headerText='Time' width='150' textAlign='center'></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</div>

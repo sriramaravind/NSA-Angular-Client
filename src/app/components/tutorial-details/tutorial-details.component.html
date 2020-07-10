@@ -1,0 +1,33 @@
+<div *ngIf="currentFreeze" class="edit-form">
+  <label><strong>
+      <h3>Enter Freeze Date</h3>
+    </strong></label>
+  <form>
+
+    <div class="form-group">
+      <h4>Day:</h4>
+      <input type="text" class="form-control" id="name" [(ngModel)]="currentFreeze.fday" name="fday" />
+    </div>
+
+    <div class="form-group">
+      <h4>Month(To make Month 0 Please enter 1):</h4>
+      <input type="text" class="form-control" id="name" [(ngModel)]="currentFreeze.fmonth" name="fmonth" />
+    </div>
+
+    <div class="form-group">
+      <h4>Year:</h4>
+      <input type="text" class="form-control" id="name" [(ngModel)]="currentFreeze.fyear" name="fyear" />
+    </div>
+  </form>
+
+  <button type="submit" class="badge badge-success" (click)="updateTutorial1()">
+    Update
+  </button>
+  
+  <p>{{ message }}</p>
+</div>
+
+<div *ngIf="!currentFreeze">
+  <br />
+  <p>Cannot access this Freeze day...</p>
+</div>

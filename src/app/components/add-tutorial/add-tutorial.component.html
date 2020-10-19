@@ -4,7 +4,7 @@
 
     <div class="form-group">
       <mat-form-field class="form-full-width">
-        <input type="text" placeholder="Select Name" id="name" required [(ngModel)]="tutorial.name" matInput
+        <input type="text" placeholder="Select Name PODA" id="name" required [(ngModel)]="tutorial.name" matInput
           [formControl]="myControl" [matAutocomplete]="auto" name="name" />
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
